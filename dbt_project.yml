@@ -35,4 +35,13 @@ models:
   my_new_project:
     # Applies to all files under models/example/
     example:
-      materialized: view
+      materialized: table
+      transient: false
+      pre-hook: "insert into curated_data.audit_tbl select 'project run','started',current_timestamp :: timestamp" 
+snapshots:
+  my_new_project:
+   pre-hook: "insert into curated_data.audit_tbl select 'snapshot started insert','started',current_timestamp :: timestamp"       
+seeds:
+  my_new_project:
+   pre-hook: "insert into curated_data.audit_tbl select 'seeds insert','started',current_timestamp :: timestamp"  
+ 
