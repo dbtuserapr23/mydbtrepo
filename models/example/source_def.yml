@@ -19,7 +19,7 @@ sources:
           - name: deptno                 
             tests:
              - relationships:
-                 to: source('RAW_DATA','DEPT')
+                 to: RAW_DATA.DEPT
                  field: deptno                         
       - name: products_stg # this is the table_name
         freshness: null      
