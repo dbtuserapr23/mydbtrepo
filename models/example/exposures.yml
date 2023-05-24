@@ -1,0 +1,19 @@
+version: 2
+
+exposures:
+
+  - name: more_than_avg_rep
+    label: Employees report having more than avg salary
+    type: dashboard
+    maturity: high
+    url: https://bi.tool/dashboards/1
+    description: >
+      Did someone say "exponential growth"?
+
+    depends_on:
+      - ref('avg_sal')
+      - ref('less_than_avg')
+
+    owner:
+      name: Callum McData
+      email: data@jaffleshop.com
