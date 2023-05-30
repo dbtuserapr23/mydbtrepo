@@ -45,5 +45,6 @@ seeds:
   my_new_project:
    pre-hook: "insert into curated_data.audit_tbl select 'seeds insert','started',current_timestamp :: timestamp"
 vars:
-  example_variable: 27  
+  example_variable: 27
+  my_tz: Asia/Kolkata  
  
