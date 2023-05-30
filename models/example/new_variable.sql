@@ -1,0 +1,1 @@
+select * from raw_data.emp_stg where empid={{var('example_variable1')}}

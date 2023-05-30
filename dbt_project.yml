@@ -43,5 +43,8 @@ snapshots:
    pre-hook: "insert into curated_data.audit_tbl select 'snapshot started insert','started',current_timestamp :: timestamp"       
 seeds:
   my_new_project:
-   pre-hook: "insert into curated_data.audit_tbl select 'seeds insert','started',current_timestamp :: timestamp"  
+   pre-hook: "insert into curated_data.audit_tbl select 'seeds insert','started',current_timestamp :: timestamp"
+vars:
+  example_variable: 27
+  my_tz: Asia/Kolkata  
  
